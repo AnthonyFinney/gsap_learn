@@ -1,69 +1,71 @@
-# React + TypeScript + Vite
+GSAP Learning Playground
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome! This repository is a hands-on environment for anyone interested in mastering GSAP (GreenSock Animation Platform) within a modern React setup powered by Vite and styled with Tailwind CSS.
 
-Currently, two official plugins are available:
+🚀 Quick Start
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone the repo
 
-## Expanding the ESLint configuration
+git clone https://github.com/<your-username>/gsap-learning-playground.git
+cd gsap-learning-playground
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Install dependencies
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+npm install
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+# or yarn install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Run the dev server
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# or yarn dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Open http://localhost:3000 in your browser.
+
+Changes to /src will hot-reload automatically.
+
+📦 Tech Stack
+
+React — Component-based UI library
+
+Vite — Blazing-fast build tool and dev server
+
+Tailwind CSS — Utility-first CSS framework
+
+GSAP — Powerful JavaScript animation libraryGSAP Learning Playground
+
+Welcome! This repository is a hands-on environment for anyone interested in mastering GSAP (GreenSock Animation Platform) within a modern React setup powered by Vite and styled with Tailwind CSS.
+
+🚀 Quick Start
+
+Clone the repo
+
+git clone https://github.com/<your-username>/gsap-learning-playground.git
+cd gsap-learning-playground
+
+Install dependencies
+
+npm install
+
+# or yarn install
+
+Run the dev server
+
+npm run dev
+
+# or yarn dev
+
+Open http://localhost:3000 in your browser.
+
+Changes to /src will hot-reload automatically.
+
+📦 Tech Stack
+
+React — Component-based UI library
+
+Vite — Blazing-fast build tool and dev server
+
+Tailwind CSS — Utility-first CSS framework
+
+GSAP — Powerful JavaScript animation library
