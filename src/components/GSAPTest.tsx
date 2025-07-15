@@ -1,14 +1,16 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 type TweenTarget = Parameters<typeof gsap.to>[0];
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function GSAPTest() {
     const container = useRef<HTMLDivElement>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
     // const timeLine = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
 
@@ -101,6 +103,19 @@ export default function GSAPTest() {
             //         from: "center",
             //     },
             // });
+
+            const boxes = gsap.utils.toArray<HTMLElement>(
+                scrollRef.current!.children
+            );
+
+            boxes.forEach((box) => {
+                gsap.to(box, {
+                    x: 150,
+                    rotation: 360,
+                    borderRadius: "100%",
+                    scale: 1.5,
+                });
+            });
         },
         { scope: container }
     );
@@ -117,14 +132,14 @@ export default function GSAPTest() {
                 <div className="green m-5 p-2 bg-green-500">Spin me!</div>
                 <div className="red m-5 p-2 bg-red-500">Spin me!</div>
                 <div className="blue m-5 p-5 bg-blue-600">Fade!!</div>
-                <div className="box m-10 p-10 bg-red-500">Box !</div>
-                <div className="flex flex-row flex-wrap">
+                <div className="box m-10 p-10 bg-red-500">Box !</div>*/}
+                <div className="flex flex-row flex-wrap" ref={scrollRef}>
                     <div className="box m-5 p-5 bg-red-500">Box !</div>
                     <div className="box m-5 p-5 bg-red-500">Box !</div>
                     <div className="box m-5 p-5 bg-red-500">Box !</div>
                     <div className="box m-5 p-5 bg-red-500">Box !</div>
                     <div className="box m-5 p-5 bg-red-500">Box !</div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
