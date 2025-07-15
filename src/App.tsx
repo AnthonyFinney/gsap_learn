@@ -1,14 +1,13 @@
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
-import GSAPTest from "./components/GSAPTest";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 function App() {
     return (
-        <>
-            <GSAPTest />
-        </>
+        <div className="flex-center h-[100vh]">
+            <h1 className="text-8xl text-indigo-500">Hello World</h1>
+        </div>
     );
 }
 
