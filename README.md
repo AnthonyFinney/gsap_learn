@@ -1,17 +1,12 @@
-# GSAP Learning Playground
+# GSAP Learning
 
-Welcome! This repository is my personal test file for GSAP (GreenSock Animation Platform) within a modern React setup powered by Vite and styled with Tailwind CSS.
+Welcome! This repository is where i rebuild the js mastary gsap_cocktails.
 
 # 🚀 Quick Start
 
 Clone the repo
 
-git clone https://github.com/<your-username>/gsap-learning-playground.git
-cd gsap-learning-playground
-
-Install dependencies
-
-# npm install or yarn install
+npm install or yarn install
 
 Run the dev server
 
