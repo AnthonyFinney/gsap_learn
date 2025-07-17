@@ -1,6 +1,7 @@
 import { useRef, type FC } from "react";
 import { navLinks } from "../constants";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const Navbar: FC = () => {
     const container = useRef<HTMLElement>(null);
@@ -38,7 +39,7 @@ const Navbar: FC = () => {
                     <p>Velvet Pour</p>
                 </a>
 
-                <ul className="flex gap-0.5">
+                <ul>
                     {navLinks.map((link) => (
                         <li key={link.id}>
                             <a href={`#${link.id}`}>{link.title}</a>
