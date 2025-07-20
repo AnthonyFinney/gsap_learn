@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
-
 @import "tailwindcss";
 
 @font-face {
@@ -13,6 +12,21 @@
     --font-sans: "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
     --font-serif: "DM Serif Text", serif;
+}
+
+/* Reset box-sizing and hide any horizontal overflow at the root */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+#__next {
+    width: 100%;
+    overflow-x: hidden !important;
 }
 
 html,
@@ -58,6 +72,16 @@ body {
 }
 
 @layer components {
+
+    /* Contain any overflow in major sections */
+    #hero,
+    #art,
+    #cocktails,
+    #menu,
+    #contact {
+        @apply relative overflow-hidden;
+    }
+
     main {
         @apply w-full overflow-x-hidden;
     }
@@ -74,7 +98,7 @@ body {
         }
 
         a {
-            @apply cursor-pointer text-nowrap md:text-base text-sm;
+            @apply cursor-pointer whitespace-nowrap md:text-base text-sm;
         }
 
         ul {
@@ -83,7 +107,7 @@ body {
     }
 
     .noisy {
-        @apply absolute inset-0 size-full bg-[url("/images/noise.png")];
+        @apply absolute inset-0 w-full h-full bg-[url("/images/noise.png")];
     }
 
     #hero {
@@ -273,7 +297,7 @@ body {
     }
 
     #menu {
-        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient;
+        @apply relative w-full md:mt-40 mt-0 2xl:px-0 px-5 py-20 radial-gradient overflow-hidden;
 
         #m-left-leaf {
             @apply object-contain absolute -bottom-20 left-0 md:w-fit w-1/3;
