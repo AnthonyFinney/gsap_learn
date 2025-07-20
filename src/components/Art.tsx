@@ -41,7 +41,7 @@ const Art: FC = () => {
     });
 
     return (
-        <div id="art" className="overflow-x-hidden">
+        <div id="art">
             <div className="container mx-auto h-full pt-20">
                 <h2 className="will-fade">The ART</h2>
 
@@ -59,7 +59,7 @@ const Art: FC = () => {
                         <img
                             src="/images/under-img.jpg"
                             alt="cocktail"
-                            className="abs-center masked-img size-full object-center"
+                            className="abs-center masked-img size-full object-contain"
                         />
                     </div>
 
@@ -79,11 +79,9 @@ const Art: FC = () => {
                 <div className="masked-container">
                     <h2 className="will-fade">Sip-Worthy Perfection</h2>
                     <div id="masked-content">
-                        <h3 className="lg:text-3xl">
-                            Made with Craft, Poured with Passion
-                        </h3>
+                        <h3>Made with Craft, Poured with Passion</h3>
                         <p>
-                            This isnt just a drink. Its a carefully crafted
+                            This isn’t just a drink. It’s a carefully crafted
                             moment made just for you.
                         </p>
                     </div>
