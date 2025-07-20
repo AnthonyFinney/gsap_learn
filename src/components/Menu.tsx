@@ -9,6 +9,18 @@ const Menu: FC = () => {
     const totalCocktails = allCocktails.length;
 
     useGSAP(() => {
+        const parallaxTimeline = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#menu",
+                start: "top 30%",
+                end: "bottom 80%",
+                scrub: true,
+            },
+        });
+
+        parallaxTimeline.to("#m-left-leaf", { y: -100 });
+        parallaxTimeline.to("#m-right-leaf", { y: 100 });
+
         gsap.fromTo("#title", { opacity: 0 }, { opacity: 1, duration: 1 });
         gsap.fromTo(
             ".cocktail img",
